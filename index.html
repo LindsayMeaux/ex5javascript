@@ -29,12 +29,13 @@ else
  {
 alert('Recommencez avec des nombres décimaux')}
 }*/
-var regex = /^[0-9]+[.][0-9]+$/;
+var regex =/^[0-9]+[.][0-9]+$/;
 if(regex.test(firstnumber) && regex.test(secondnumber)){
-  firstnumber = math.trunc(firstnumber);
-  alert(firstnumber*secondnumber);
+  firstnumber = Math.trunc(firstnumber);
+  alert(firstnumber * secondnumber);
 } else {
   alert('Saisir un nombre décimal');
+}
 }
 
 
