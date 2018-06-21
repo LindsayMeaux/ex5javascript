@@ -17,11 +17,10 @@
 
 var firstnumber = document.getElementById('firstnumber').value;
 var secondnumber = document.getElementById('secondnumber').value;
-var regex = /^[0-9 , .]+[\d]+$/;
+/*var regex = /^[0-9 , .]+[\d]+$/;
 var fnumberint = parseInt(firstnumber);
 var fnumbfloat = parseFloat(secondnumber);
 var result = fnumberint * fnumbfloat;
-
 if((regex.test(firstnumber) == true ) && (regex.test(secondnumber) == true ))
 {
     alert(result)
@@ -29,8 +28,14 @@ if((regex.test(firstnumber) == true ) && (regex.test(secondnumber) == true ))
 else
  {
 alert('Recommencez avec des nombres décimaux')}
+}*/
+var regex = /^[0-9]+[.][0-9]+$/;
+if(regex.test(firstnumber) && regex.test(secondnumber)){
+  firstnumber = math.trunc(firstnumber);
+  alert(firstnumber*secondnumber);
+} else {
+  alert('Saisir un nombre décimal');
 }
-
 
 
   </script>
