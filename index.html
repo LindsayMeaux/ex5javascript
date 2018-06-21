@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ex5</title>
+  </head>
+  <body>
+    <form>
+              <label for="firstnumber">Premier nombre : </label><input type="text" id="firstnumber" name="firstnumber"/><br/>
+              <label for="secondnumber">Deuxième nombre : </label><input type="text" id="secondnumber" name="secondnumber"/><br/>
+              <button onclick="number()"  id="submit" name ="submit">Valider</button>
+  </form>
+
+  <script>
+
+  function number(){
+
+var firstnumber = document.getElementById('firstnumber').value;
+var secondnumber = document.getElementById('secondnumber').value;
+var regex = /^[0-9 , .]+[\d]+$/;
+var fnumberint = parseInt(firstnumber);
+var fnumbfloat = parseFloat(secondnumber);
+var result = fnumberint * fnumbfloat;
+
+if((regex.test(firstnumber) == true ) && (regex.test(secondnumber) == true ))
+{
+    alert(result)
+}
+else
+ {
+alert('Recommencez avec des nombres décimaux')}
+}
+
+
+
+  </script>
+  </body>
+</html>
